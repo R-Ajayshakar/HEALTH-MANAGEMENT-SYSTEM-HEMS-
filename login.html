@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEMS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            background-color: white;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            margin-right: 500px;
+        }
+
+        h1 {
+            color: rgb(81, 13, 144);
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+
+        img {
+            height: 25%;
+            margin-bottom: 40px;
+        }
+
+        input {
+            width: 40%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input::placeholder {
+            color: rgb(146, 146, 255);
+            font-style: italic;
+        }
+
+        a {
+            color: rgb(81, 13, 144);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .rounded-button {
+            background-color: white;
+            color: black;
+            border: 2px solid #333366;
+            border-radius: 10px;
+            padding: 15px;
+            padding-left: 50px;
+            padding-right: 50px;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        #loginBtn {
+            margin-right: 0;
+        }
+
+        #signUpBtn:hover,
+        #loginBtn:hover {
+            cursor: pointer;
+            background-color: rgb(81, 13, 144);
+            ;
+            color: white;
+        }
+
+        p {
+            color: rgb(146, 146, 255);
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                margin-right: 50px;
+                position: absolute;
+                top: -100px;
+            }
+
+            input {
+                width: 50%;
+            }
+
+            .rounded-button {
+
+                margin-right: 10px;
+                padding: 10px;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            img {
+                height: 10%;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1> <small>Welcome to</small> <br>
+            <center style="font-size: larger;">HEMS</center>
+        </h1>
+        <img src="./images/doctor-svgrepo-com.svg" alt="Character Image">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <a href="#" style="font-style: italic;">Forgot Password?</a>
+        <button id="loginBtn" class="rounded-button" style="font-style: italic;">Login</button>
+        <p style="font-style: italic;">Don't have an account? <a href="signup.html">signup</a></p>
+    </div>
+
+    <!-- Include JS file -->
+    <script>
+        // Add your JavaScript functionality here
+        document.getElementById('loginBtn').addEventListener('click', function () {
+            window.location.href = "Home.html";
+        });
+
+    </script>
+</body>
+
+</html>
